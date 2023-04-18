@@ -40,11 +40,18 @@
 
   ```python
   from src.utils import show_error
+  
+  # ejemplo
+  show_error('El número insertado debe ser mayor a 0')
   ```
 - Lo mismo ocurre si se quiere mostrar por consola algún mensaje con alguna respuesta con la función `show_success` que se puede importar así:
 
   ```python
   from src.utils import show_success
+  
+  valor = 5 
+  # ejemplo
+  show_success(f'El valor del número es {valor}')
   ```
 
 > ### 😹 Chistecillo
