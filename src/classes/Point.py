@@ -11,6 +11,10 @@ class Point:
     def __str__(self):
         return "(" + f"{self.x}" + "," + f"{self.y}" + ")"
 
+    # Se sobreescribe el método equal para poder comparar dos puntos a partir de sus coordenadas
+    def __eq__(self, point_2):
+        return self.x == point_2.x and self.y == point_2.y
+
     # El método quadrant() determina y muestra el cuadrante en el que se encuentra el punto
     def quadrant(self):
         if self.x == 0 and self.y != 0:
