@@ -103,11 +103,11 @@ Debido a la vagancia extrema que hay en este equipo se vuelve a trabajar todo el
 Tareas de este biutiful team
 
 ### 🧑‍🚀 Tareas de José **(En la clase Point)** 
-- ⭕ Añade un método constructor para crear puntos fácilmente. Si no se recibe una coordenada, su valor será cero.
-- ⭕ Sobreescribe el método string, para que al imprimir por pantalla un punto aparezca en formato (X,Y).
-- ⭕ Añade un método llamado cuadrante que indique a qué cuadrante pertenece el punto, teniendo en cuenta que si X == 0 e Y != 0 se sitúa sobre el eje Y, si X != 0 e Y == 0 se sitúa sobre el eje X y si X == 0 e Y == 0 está sobre el origen.
-- ⭕ Añade un método llamado vector, que tome otro punto y calcule el vector resultante entre los dos puntos.
-- ⭕ Añade un método llamado distancia, que tome otro punto y calcule la distancia entre los dos puntos y la muestre por pantalla **(Con la fórmula que se encuentra en eñ PDF)**.
+- ✅ Añade un método constructor para crear puntos fácilmente. Si no se recibe una coordenada, su valor será cero.
+- ✅ Sobreescribe el método string, para que al imprimir por pantalla un punto aparezca en formato (X,Y).
+- ✅ Añade un método llamado cuadrante que indique a qué cuadrante pertenece el punto, teniendo en cuenta que si X == 0 e Y != 0 se sitúa sobre el eje Y, si X != 0 e Y == 0 se sitúa sobre el eje X y si X == 0 e Y == 0 está sobre el origen.
+- ✅ Añade un método llamado vector, que tome otro punto y calcule el vector resultante entre los dos puntos.
+- ✅ Añade un método llamado distancia, que tome otro punto y calcule la distancia entre los dos puntos y la muestre por pantalla **(Con la fórmula que se encuentra en eñ PDF)**.
 
 ### 🐈 Tareas de Amaya **(En la clase Rectangle)**
 - ⭕ Añade un método constructor para crear ambos puntos fácilmente, si no se envían se crearán dos puntos en el origen por defecto.
