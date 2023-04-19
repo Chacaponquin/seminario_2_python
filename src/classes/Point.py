@@ -10,6 +10,7 @@ class Point:
     # Se sobreescribe el método string para mostrar las coordenadas del punto de la forma (X,Y)
     def __str__(self):
         return "(" + f"{self.x}" + "," + f"{self.y}" + ")"
+
     # El método quadrant() determina y muestra el cuadrante en el que se encuentra el punto
     def quadrant(self):
         if self.x == 0 and self.y != 0:
