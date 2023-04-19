@@ -23,9 +23,19 @@ class PointTest(unittest.TestCase):
 		are_correct = bool(correct_cord_x and correct_cord_y)
 		self.assertTrue(are_correct)
 
-	# test para verificar que en el caso de no recibir parámetros las coordenadas sean (0,0)
-	def test_create_point_test_2(self):
-		point = Point()
+	# test para probar el método builder
+	def test_builder(self):
+		point = Point.builder(4, 5)
+
+		correct_cord_x = point.x == 4
+		correct_cord_y = point.y == 5
+
+		are_correct = bool(correct_cord_x and correct_cord_y)
+		self.assertTrue(are_correct)
+
+	# test para probar el método builder en el caso de no recibir parámetros
+	def test_builder_2(self):
+		point = Point.builder()
 
 		correct_cord_x = point.x == 0
 		correct_cord_y = point.y == 0

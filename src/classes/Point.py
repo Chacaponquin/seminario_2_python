@@ -3,9 +3,15 @@ import math
 
 
 class Point:
-    def __init__(self, x=0, y=0):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
+
+    # Método estático de la clase que permite crear puntos fácilmente,
+    # en el caso de no recibir parámetros el punto estará situado en el origen de coordenadas
+    @staticmethod
+    def builder(x=0, y=0):
+        return Point(x, y)
 
     # Se sobreescribe el método string para mostrar las coordenadas del punto de la forma (X,Y)
     def __str__(self):
