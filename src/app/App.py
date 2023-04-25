@@ -1,9 +1,7 @@
 
 
 from src.classes import Point, Rectangle
-from rich.table import Table
-from rich.console import Console
-from src.utils import show_success
+from src.utils import show_success, define_table, define_table_column, print_table
 
 
 class App:
@@ -22,16 +20,16 @@ class App:
         self.ex7()
 
     def ex7(self):
-        table = Table(border_style="green")
+        table = define_table()
 
-        table.add_column("Dato", style="green", no_wrap=True)
-        table.add_column("Valor", style="green", no_wrap=True)
+        define_table_column(table, 'Dato')
+        define_table_column(table, 'Valor')
 
         table.add_row('Base', str(self.rectangle.base()))
         table.add_row('Altura', str(self.rectangle.height()))
         table.add_row('Área', str(self.rectangle.area()))
 
-        self.print_table(table)
+        print_table(table)
 
     def ex5(self):
         # crear punto (0, 0)
@@ -55,30 +53,30 @@ class App:
             point = 'C'
 
         # crear tabla
-        table = Table(border_style="green")
+        table = define_table()
 
-        table.add_column("Punto", style="green", no_wrap=True)
-        table.add_column("Distancia con el punto (0, 0)", style="green", no_wrap=True)
+        define_table_column(table, 'Punto')
+        define_table_column(table, 'Distancia con el punto (0, 0)')
 
         table.add_row('A', str(distance_a_initial))
         table.add_row('B', str(distance_b_initial))
         table.add_row('C', str(distance_c_initial))
 
         # mostrar tabla
-        self.print_table(table)
+        print_table(table)
         # mostrar cuál es la distancia mayor
         show_success(f'El punto con mayor distancia con respecto al punto (0, 0) es: {point}')
 
     def ex4(self):
-        table = Table(border_style="green")
+        table = define_table()
 
-        table.add_column("Puntos", style="green", no_wrap=True)
-        table.add_column("Distancia entre los puntos", style="green", no_wrap=True)
+        define_table_column(table, 'Puntos')
+        define_table_column(table, 'Distancia entre los puntos')
 
         table.add_row('A -> B', str(self.point_a.distance(self.point_b)))
         table.add_row('B -> A', str(self.point_b.distance(self.point_a)))
 
-        self.print_table(table)
+        print_table(table)
 
     def ex3(self):
         table = Table(border_style="green")
@@ -92,30 +90,30 @@ class App:
         self.print_table(table)
 
     def ex2(self):
-        table = Table(border_style="green")
+        table = define_table()
 
-        table.add_column("Punto", style="green", no_wrap=True)
-        table.add_column("Cuadrante", style="green", no_wrap=True)
+        define_table_column(table, 'Punto')
+        define_table_column(table, 'Cuadrante')
 
         table.add_row('A', self.point_a.quadrant())
         table.add_row('C', self.point_c.quadrant())
         table.add_row('D', self.point_d.quadrant())
 
-        self.print_table(table)
+        print_table(table)
 
     def ex1(self):
-        table = Table(border_style="green")
+        table = define_table()
 
-        table.add_column("Punto", style="green", no_wrap=True)
-        table.add_column("X", style="green", no_wrap=True)
-        table.add_column("Y", style="green", no_wrap=True)
+        define_table_column(table, 'Punto')
+        define_table_column(table, 'X')
+        define_table_column(table, 'Y')
 
         table.add_row('A', str(self.point_a.x), str(self.point_a.y))
         table.add_row('B', str(self.point_b.x), str(self.point_b.y))
         table.add_row('C', str(self.point_c.x), str(self.point_c.y))
         table.add_row('D', str(self.point_d.x), str(self.point_d.y))
 
-        self.print_table(table)
+        print_table(table)
 
     def create_points(self):
         point_a = Point.builder(2, 3)
@@ -127,10 +125,6 @@ class App:
 
     def create_rectangle(self, point1: Point, point2: Point):
         return Rectangle.builder(point1.x, point1.y, point2.x, point2.y)
-
-    def print_table(self, table: Table):
-        console = Console()
-        console.print(table)
 
 
 if __name__ == '__main__':
