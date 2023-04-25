@@ -1,5 +1,3 @@
-
-
 from src.classes import Point, Rectangle
 from src.utils import show_success, define_table, define_table_column, print_table
 
@@ -12,12 +10,21 @@ class App:
         self.rectangle = self.create_rectangle(self.point_a, self.point_b)
 
     def start(self):
+        self.show_ex_label(1)
         self.ex1()
+        self.show_ex_label(2)
         self.ex2()
+        self.show_ex_label(3)
         self.ex3()
+        self.show_ex_label(4)
         self.ex4()
+        self.show_ex_label(5)
         self.ex5()
+        self.show_ex_label(7)
         self.ex7()
+
+    def show_ex_label(self, ex_number: int):
+        print(f'\n>>> Ejercicio {str(ex_number)}:')
 
     def ex7(self):
         table = define_table()
@@ -79,15 +86,15 @@ class App:
         print_table(table)
 
     def ex3(self):
-        table = Table(border_style="green")
+        table = define_table()
 
-        table.add_column("Vector", style="green", no_wrap=True)
-        table.add_column("Valor", style="green", no_wrap=True)
+        define_table_column(table, 'Vector')
+        define_table_column(table, 'Valor')
 
         table.add_row('AB', str(self.point_a.vector(self.point_b)))
         table.add_row('BA', str(self.point_b.vector(self.point_a)))
 
-        self.print_table(table)
+        print_table(table)
 
     def ex2(self):
         table = define_table()
