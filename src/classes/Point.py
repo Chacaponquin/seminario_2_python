@@ -23,22 +23,25 @@ class Point:
 
     # El método quadrant() determina y muestra el cuadrante en el que se encuentra el punto
     def quadrant(self):
+        cuadrante = ''
         if self.x == 0 and self.y != 0:
-            print("El punto " + self.__str__() + " se encuentra sobre el eje X")
+            cuadrante = "El punto se encuentra sobre el eje X"
         elif self.y == 0 and self.x != 0:
-            print("El punto " + self.__str__() + " se encuentra sobre el eje Y")
+            cuadrante = "El punto se encuentra sobre el eje Y"
         elif self.x > 0:
             if self.y > 0:
-                print("El punto " + self.__str__() + " se encuentra en el primer cuadrante")
+                cuadrante = "El punto se encuentra en el primer cuadrante"
             else:
-                print("El punto " + self.__str__() + " se encuentra en el cuarto cuadrante")
+                cuadrante = "El punto se encuentra en el cuarto cuadrante"
         elif self.x < 0:
             if self.y > 0:
-                print("El punto " + self.__str__() + " se encuentra en el segundo cuadrante")
+                cuadrante = "El punto se encuentra en el segundo cuadrante"
             else:
-                print("El punto " + self.__str__() + " se encuentra en el tercer cuadrante")
+                cuadrante = "El punto se encuentra en el tercer cuadrante"
         else:
-            print("El punto " + self.__str__() + " se encuentra en el origen de coordenadas")
+            cuadrante = "El punto se encuentra en el origen de coordenadas"
+
+        return cuadrante
 
     # El método vector(point) devuelve el vector resultante entre el punto y otro punto
     def vector(self, point):
